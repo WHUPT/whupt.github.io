@@ -1,23 +1,47 @@
-Hello World
+<!DOCTYPE html>
 <html>
-<head></head>
-<body>
-<!-- LiveRe City install code -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC80ODEwOS8yNDYwNg==">
-	<script type="text/javascript">
-   (function(d, s) {
-       var j, e = d.getElementsByTagName(s)[0];
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title></title>	
+	<link rel="stylesheet" type="text/css" href="css/main.css" />	
+</head>
+<script>
+function load_logo() {
+    document.getElementById("logo").src="pic/logos/"+padding(parseInt(Math.random()*10+1),2)+".png"
+}
+function padding(num, length) {
+    for(var len = (num + "").length; len < length; len = num.length) {
+        num = "0" + num;            
+    }
+    return num;
+}
+</script>
+<body class="main-body" onload="load_logo()">
+	<div class="lose-main">
+		<div class="lose-box">
+                        <img id="logo">
+			<p class="lose-en">珞樱 PT 已于 2019年12月31日正式关站</p>
+		</div>
+        </div>
 
-       if (typeof LivereTower === 'function') { return; }
-
-       j = d.createElement(s);
-       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-       j.async = true;
-
-       e.parentNode.insertBefore(j, e);
-   })(document, 'script');
-	</script>
-<noscript> Please activate JavaScript for write a comment in LiveRe</noscript>
-</div>
-<!-- completed City install code -->
+        <!-- LiveRe City install code -->
+        <div id="lv-container" data-id="city" data-uid="MTAyMC80ODEwOS8yNDYwNg==">
+        	<script type="text/javascript">
+           (function(d, s) {
+               var j, e = d.getElementsByTagName(s)[0];
+        
+               if (typeof LivereTower === 'function') { return; }
+        
+               j = d.createElement(s);
+               j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+               j.async = true;
+        
+               e.parentNode.insertBefore(j, e);
+           })(document, 'script');
+        	</script>
+        <noscript> Please activate JavaScript for write a comment in LiveRe</noscript>
+	</div>
+        <!-- completed City install code -->
 </body>
+</html>
